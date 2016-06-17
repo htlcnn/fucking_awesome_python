@@ -92,8 +92,8 @@ console_handler.setFormatter(log_formatter)
 logger.addHandler(console_handler)
 
 # get github client id and client secret
-CLIENT_ID = '9237bea233afb6acfc3d'
-CLIENT_SECRET = getpass.getpass('Enter client Secret: ')
+CLIENT_ID = input('Client ID: ')
+CLIENT_SECRET = getpass.getpass('Client Secret: ')
 
 
 if __name__ == '__main__':
