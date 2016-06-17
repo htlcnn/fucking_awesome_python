@@ -34,20 +34,18 @@ def parse_link(md_links):
                 txt = txt.format(title, link, stars, forks)
                 parsed_md_links.append(txt)
                 count += 1
-                logger.debug('{}. Done {}/{}. Parsed: {}'.format(count,
-                                                                 user,
-                                                                 repo,
-                                                                 txt))
+                logger.debug('%s. Done %s/%s. Parsed: %s',
+                             count, user, repo, txt)
             except Exception as e:
                 parsed_md_links.append(md_link)
-                logger.error('{} {}'.format(md_link, e))
+                logger.error('%s %s', md_link, e)
         else:
             title, link = re.match(r'\[(.+)\]\((.+)\)', md_link).groups()
             title = ':earth_americas: {}'.format(title)
             parsed = '[{}]({})'.format(title, link)
             parsed_md_links.append(parsed)
             count += 1
-            logger.debug('{}. Done {}. Parsed: {}'.format(count, link, parsed))
+            logger.debug('%s. Done %s. Parsed: %s', count, link, parsed)
     return zip(md_links, parsed_md_links)
 
 
