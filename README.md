@@ -1,4 +1,4 @@
-# Fucking Awesome Python
+# Fucking Awesome Python [![](https://api.travis-ci.org/htlcnn/fucking_awesome_python.svg)](https://travis-ci.org/htlcnn/fucking_awesome_python)
 
 A curated list with Github stars and forks stats based on awesome
  [awesome-python](https://github.com/vinta/awesome-python),

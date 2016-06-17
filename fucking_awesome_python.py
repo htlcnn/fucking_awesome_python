@@ -3,7 +3,6 @@ import logging
 import os
 import re
 
-
 import requests
 
 
@@ -61,7 +60,8 @@ def main():
     # get all links
     md_links = re.findall('.+(\[.+\]\(http[^\)]+\))+.+', res.text)
     replace_list = parse_link(md_links)
-    final_txt = '''# Fucking Awesome Python
+    final_txt = '''# Fucking Awesome Python![](https://api.travis-ci.org/
+htlcnn/fucking_awesome_python.svg)
 
 A curated list with Github stars and forks stats based on awesome
  [awesome-python](https://github.com/vinta/awesome-python),
@@ -94,7 +94,7 @@ logger.addHandler(console_handler)
 
 # get github client id and client secret
 CLIENT_ID = os.getenv('fap_client_id')
-CLIENT_SECRET = os.getenv('fav_client_secret')
+CLIENT_SECRET = os.getenv('fap_client_secret')
 
 
 if __name__ == '__main__':
