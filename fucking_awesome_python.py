@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import logging
-import getpass
+import os
 import re
 
 import requests
@@ -92,8 +92,8 @@ console_handler.setFormatter(log_formatter)
 logger.addHandler(console_handler)
 
 # get github client id and client secret
-CLIENT_ID = input('Client ID: ')
-CLIENT_SECRET = getpass.getpass('Client Secret: ')
+CLIENT_ID = os.getenv('fap_client_id')
+CLIENT_SECRET = os.getenv('fav_client_secret')
 
 
 if __name__ == '__main__':
